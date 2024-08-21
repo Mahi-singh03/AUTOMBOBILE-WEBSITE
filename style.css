@@ -27,6 +27,7 @@ body{
 
 .display-3{
   color: #000;
+  font-size: 50px;;
 }
 
 
@@ -107,3 +108,5 @@ h4{
 h6{
   text-align: center;
 }
+
+
