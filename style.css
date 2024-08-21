@@ -26,6 +26,7 @@ body{
 }
 
 .display-3{
+  padding-top:15px ;
   color: #000;
   font-size: 50px;;
 }
