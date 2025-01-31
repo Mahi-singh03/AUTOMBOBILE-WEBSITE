@@ -1,0 +1,174 @@
+.gallery-area{
+    .gallery-box{
+        .single-gallery{
+            overflow: hidden;
+            z-index: 0;
+            position: relative;  
+            &::after{
+                content: "";
+                background-color: rgba(11, 14, 13,0.702);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+                visibility: hidden;
+                opacity: 0;
+               @include transition(.4s);
+            }
+            .big-img{
+                height:730px;
+            }
+            .smoll-img{
+                height:365px;
+            }
+            .gallery-img{
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .g-caption{
+               position: absolute;
+               z-index: 5;
+               top: 60%;
+               transform:translateY(-40%);
+               @include transition(.4s);
+               left: 0;
+                right: 0;
+                text-align: center;
+               opacity:0;
+               visibility:hidden;
+               span{
+                   color: #ff5600;
+                   font-size: 30px;
+                   font-weight: 500;
+                   margin-bottom: 7px;
+                    display: block;
+                    @include transition(.4s);
+               }
+                h4{
+                    color: #fff;
+                    font-size: 50px;
+                    font-weight: 700;
+                    line-height: 1;
+                    margin-bottom: 12px;
+                    @include transition(.4s);
+                    @media #{$large1}{
+                        font-size: 34px;
+                    }
+                    @media #{$lg}{
+                        font-size: 30px;
+                    }
+                    @media #{$md}{
+                        font-size: 35px;
+                    }
+                    @media #{$sm}{
+                        font-size: 30px;
+                    }
+                    @media #{$xs}{
+                        font-size: 30px;
+                    }
+               }
+                p{
+                    color: #fff;
+                    margin-bottom: 40px;
+                    font-size: 13px;
+                    @include transition(.4s);
+                    @media #{$lg}{
+                        font-size: 12px;
+                    }
+               }
+               .order-btn{
+                   display: inline-block;
+                   padding: 29px 32px;
+               }
+            }
+        }
+    }
+        // Tabs Button Style
+        .nav-tabs{
+            margin-bottom: 15px;
+            padding-bottom: 0px;
+            position: relative;
+            border: 0;
+            display: flex;
+            justify-content: center;
+            .nav-link {
+                position: relative;
+                background: transparent;
+                padding: 5px 22px;
+                border-radius: 0;
+                border: 0;
+                color: #212025;
+                &::after {
+                    position: absolute;
+                    height: 15px;
+                    width: 15px;
+                    background: #ff5600;
+                    content: "";
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    bottom: -8px;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+    
+            }
+            .nav-item {
+                margin: 0 27px;
+                display: block;
+                color: #1b1b1b;
+                font-size: 16px;
+                @media #{$md}{
+                    margin: 0 15px;
+                }
+                @media #{$sm}{
+                    margin: 0 0px;
+                }
+                @media #{$xs}{
+                    margin: 15px 0px;
+                }
+            }
+        }
+        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+            background: #ff5600;
+            color: #fff;
+            font-size: 16px;
+            padding: 5px 22px;
+            @include transition(.0s);
+            &:after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+            border: 0;
+        }
+}
+
+// Hover Effect
+.gallery-box:hover .single-gallery::after{
+    visibility: visible;
+    opacity: 1;
+}
+.gallery-box:hover .single-gallery .g-caption{
+    top: 50%;
+    transform: translateY(-50%);
+   opacity: 1;
+   visibility: visible;
+
+
+}
+.gallery-box:hover .single-gallery .cap-icon{
+    top: 50px;
+    left: 42px;
+    transition-duration: .5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+

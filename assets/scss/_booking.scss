@@ -1,0 +1,129 @@
+.booking-area{
+    @media #{$sm}{
+        padding: 70px 0;
+    }
+    @media #{$xs}{
+        padding: 70px 0;
+    }
+    .booking-wrap{
+        padding: 70px 60px 40px 60px;
+        @media #{$lg}{
+            padding: 50px 46px 20px 42px;
+        }
+        @media #{$md}{
+            padding: 50px 30px 13px 30px;
+        }
+        @media #{$sm}{
+            padding: 50px 30px 13px 30px;
+        }
+        @media #{$xs}{
+            padding: 50px 20px 13px 20px;
+        }
+        background:#fff;
+        border-radius: 10px;
+        box-shadow: 0px 8px 79px 0px rgba(0, 0, 0, 0.08);
+        flex-wrap: wrap;
+        @media #{$md}{
+            flex-wrap: wrap;
+        }
+        @media #{$sm}{
+            flex-wrap: wrap;
+        }
+        @media #{$xs}{
+            flex-wrap: wrap;
+        }
+        .single-select-box {
+            width: 23%;
+            @media #{$lg}{
+                width: 48%;
+            }
+            @media #{$md}{
+                width: 48%;
+            }
+            @media #{$sm}{
+                width: 48%;
+            }
+            @media #{$xs}{
+                width: 100%;
+            }
+        }
+        .nice-select {
+            color: #9d9d9d;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding-left: 49px;
+            padding-right: 45px;
+            text-align: left !important;
+            line-height: 69px;
+            border: 0;
+            height: 65px;
+            width: 100%;
+
+            &::after {
+                border-bottom: 2px solid #a3a3a3;
+                border-right: 2px solid #a3a3a3;
+                height: 7px;
+                right: 41px;
+                width: 7px;
+            }
+            &.open .list {
+                width: 100%;
+                border-radius: 0;
+            }
+            .option {
+                color: #a3a3a3;
+            }
+        }
+        .select-itms {
+            position: relative;
+        }
+        .select-icon {
+            position: absolute;
+            z-index: 1;
+            left: 11px;
+            top: 20px;
+            color: #9d9d9d;
+            font-size: 20px;
+        }
+    }
+}
+.select-btn {
+    padding: 30px 70px;
+    width: 100%;
+}
+
+
+
+.gj-textbox-md {
+    color: #9d9d9d;
+    background-color: #f9f9f9;
+    border: 0;
+    height: 65px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.gj-picker.gj-picker-md.datepicker.gj-unselectable{
+    @media #{$xs}{
+        left: 20px !important;
+    }
+}
+
+// Date Picker
+.gj-datepicker-md [role="right-icon"] {
+	position: absolute;
+	left: 14px;
+	top: 21px;
+	font-size: 24px;
+	color: #9d9d9d;
+}
+// Time Picker
+.gj-timepicker-md [role="right-icon"] {
+	cursor: pointer;
+	position: absolute;
+    left: 11px;
+    top: 20px;
+	font-size: 24px;
+	color: #979695;
+}
